@@ -1,0 +1,115 @@
+nav {
+    background: #333;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid #444;
+}
+
+p,h1,h2,h3{
+ color: aliceblue;
+}
+a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+a:hover {
+    background: #444;
+}
+
+/* Hamburger icon */
+label {
+    display: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+/* Desktop view */
+
+/* oh my god I cant focus for shit, nothing is being made and Im terrified of being found out and being a fool */
+@media (min-width: 768px) {
+    ul {
+     display: grid;
+        display: flex;
+    }
+    
+    li {
+        border: none;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    label {
+        display: block;
+        color: white;
+    }
+
+    ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    input:checked ~ ul {
+        max-height: 500px; /* Hoog genoeg voor alle items */
+    }
+
+    /* Hamburger lijnen */
+    label::before {
+        content: "☰";
+        font-size: 24px;
+    }
+
+    input:checked + label::before {
+        content: "✕";
+    }
+}
+
+@namespace url(https://github.com/Thomas0622?tab=repositories); 
+@namespace svg url(http://www.w3.org/2000/svg); 
+
+/* matches all XHTML <a> elements (since XHTML is the default namespace */
+a {
+  color: salmon;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* matches all SVG <a> elements */
+svg|a {
+  fill: maroon;
+  text-decoration: underline;
+}
+
+/* matches both XHTML and SVG <a> elements */
+*|a {
+  text-transform: uppercase;
+}
+
+@import{img:C:\Users\dekle\OneDrive - Zadkine\periode 3\Front-end\Mavic-Allroad-S-Carbon-Disc-Brake-Rear-Wheel.jpg}
+
+body {
+ background-image: url(img/Gz2zij-WUAAo59Q.jpg);
+ background-repeat: no-repeat;
+ 
+ background-size: cover;
+ background-attachment:fixed;
+ 
+}
+
